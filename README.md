@@ -3,7 +3,7 @@ A quick and simple debug decorater which lets you toggle stdout debug within a f
 
 Supported on Python2 and Python3.
 
-**WARNING-1**: Do not use this module if you are already using the `logging` module for other critical logging purposes since it may intefere with it. This is currently a solution only meant for simple yet frustrating use cases. If you are using the `logging` module, please change the code as you please to integrate it into your work.
+**WARNING-1**: Do not use this module if you are already using the `logging` module for other critical logging purposes since it may intefere with it. This is currently a solution only meant for simple yet frustrating use cases. If you are using the `logging` module, change the code as you please to integrate it into your work.
 
 **WARNING-2**: You will no longer be able to pass an argument named `debug` to your functions since this module will recognize that argument for itself and remove it from the arguments.
 
@@ -44,3 +44,6 @@ def sum(a, b):  # No additional argument.
 >>>> sum(1, 2, debug=True)
 [Out] output: 3
 ```
+
+# Installation
+```pip install quick_debug```
