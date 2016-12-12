@@ -19,11 +19,13 @@ def sum(a, b, debug=False):
 ```
 ```
 # Debug output disabled
->>>> sum(1, 2)
->>>> sum(1, 2, debug=False)
-# Debug output enabled
+>>>> sum(1, 2)                    # No debug shown
+>>>> sum(1, 2, debug=False)       # No debug shown
+
+
+# Debug output enabled            # Debug shown
 >>>> sum(1, 2, debug=True)
-[Out] output: 3
+output: 3
 ```
 
 ### How you would use debug now
@@ -38,12 +40,18 @@ def sum(a, b):  # No additional argument.
 ```
 ```
 # Debug output disabled
->>>> sum(1, 2)
->>>> sum(1, 2, debug=False)
+>>>> sum(1, 2)                    # No debug shown
+>>>> sum(1, 2, debug=False)       # No debug shown
+
+
 # Debug output enabled
->>>> sum(1, 2, debug=True)
-[Out] output: 3
+>>>> sum(1, 2, debug=True)        # Debug shown
+DEBUG:root:============================================= sum
+DEBUG:root:output: 2
 ```
+
+
+**NOTE**: The debug messages are formatted with `DEBUG` followed by `root` since we are using the root logger i.e. `logger = logging.getLogger()`. Another additional message with `===...=== <func_name>` is added to indicate which function is being debugged. This happens only once per function is purely aesthetic and I personally found it helpful when debugging multiple functions at a time.
 
 # Installation
 ```pip install quick_debug```
