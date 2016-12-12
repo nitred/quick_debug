@@ -35,7 +35,7 @@ from quick_debug import quick_debug, logger
 @quick_debug
 def sum(a, b):  # No additional argument.
     c = a + b
-    logger.DEBUG("output: {}".format(c))  # No if statement.
+    logger.debug("output: {}".format(c))  # No if statement.
     return c
 ```
 ```
